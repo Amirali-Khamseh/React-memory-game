@@ -18,6 +18,8 @@ const [turns,setTurns] = useState(0);
 //States for the Users's choices 
 const [choice1,setChoice1] = useState(null); 
 const [choice2,setChoice2] = useState(null); 
+//State for managing the number of cards to be previewed 
+const [disabled,setDisabled]=useState(false);
 //Duplicating cards and create the game's grid
 const cardShuffler = ()=>{
   //The sort method shuffle the items when the result of Math.random() is a posetive intiger
@@ -35,7 +37,9 @@ const handleChoice =(card)=>{
 }
 //Comparing selected cards
 useEffect(()=>{
+  
   if(choice1 && choice2){
+    setDisabled(true);
     if(choice1.src === choice2.src){
       setCards(prevCards =>{
         return prevCards.map(card=>{
@@ -48,8 +52,8 @@ useEffect(()=>{
       })
       resetTurn();
     }else{
-      console.log('not match');
-      resetTurn();
+      setTimeout(()=> resetTurn(),500);
+     
     }
   }
 },[choice1,choice2])
@@ -59,6 +63,7 @@ useEffect(()=>{
     setChoice1(null)
     setChoice2(null)
     setTurns(prevTurns => prevTurns + 1)
+    setDisabled(false);
   }
 
   return (
@@ -69,7 +74,8 @@ useEffect(()=>{
     {cards.map((card)=>(<Card key={card.id} 
     card={card}
      handleChoice={handleChoice}
-     flipped={card=== choice1 || card === choice2 ||card.matched===true}>
+     flipped={card=== choice1 || card === choice2 ||card.matched===true}  disabled={disabled}>
+    
     </Card>))}
         
       </div>
