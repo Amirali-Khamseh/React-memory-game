@@ -14,3 +14,6 @@ This project focuses on utilizing React's capabilities to create components and 
 npm install
 npm run start
 ```
+
+![Memory game](https://github.com/Amirali-Khamseh/React-memory-game/assets/72108341/f5c0398b-22f0-46c1-b12c-a10abe4522dc)
+
