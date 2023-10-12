@@ -15,6 +15,5 @@ npm install
 npm run start
 ```
 
-![Memory game](![image](https://github.com/Amirali-Khamseh/React-memory-game/assets/72108341/7f689beb-fd16-400f-b5f8-d77a4a1201cc)
-)
+![Memory game](sc.png)
 
