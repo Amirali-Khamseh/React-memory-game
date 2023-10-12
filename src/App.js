@@ -3,12 +3,12 @@ import Card from './componenets/Card'
 import './App.css';
 
 const cardImages = [
-  { "src": "/img/helmet-1.png" },
-  { "src": "/img/potion-1.png" },
-  { "src": "/img/ring-1.png" },
-  { "src": "/img/scroll-1.png" },
-  { "src": "/img/shield-1.png" },
-  { "src": "/img/sword-1.png" },
+  { "src": "/img/flower-1.jpg" },
+  { "src": "/img/flower-2.jpg" },
+  { "src": "/img/flower-3.jpg" },
+  { "src": "/img/flower-4.jpg" },
+  { "src": "/img/flower-5.jpg" },
+  { "src": "/img/flower-6.jpg" },
 ]
 
 
@@ -66,6 +66,13 @@ useEffect(()=>{
     setDisabled(false);
   }
 
+//Re-starting the game automatically 
+useEffect(()=>{
+  cardShuffler();
+  setChoice1(null);
+  setChoice2(null);
+},[])
+
   return (
     <div className="App">
        <h1>Memory Game</h1>
@@ -79,6 +86,7 @@ useEffect(()=>{
     </Card>))}
         
       </div>
+      <p>Number of turns : {turns}</p>
     </div>
   );
 }

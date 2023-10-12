@@ -7,13 +7,17 @@ body {
   margin: 0;
   font-size: 1.5em;
   text-align: center;
-  background: #1b1523;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(232,119,8,0.7293934681181959) 45%, rgba(252,176,69,1) 100%);
   color: #fff;
 }
 
 .App {
   max-width: 860px;
-  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 button {
   background: none;
@@ -34,4 +38,16 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-gap: 20px;
+}
+
+@media (max-width:600px) {
+ 
+  .card-grid{
+    margin: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    align-content:center;
+    justify-content: center;
+  }
 }
