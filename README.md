@@ -1,4 +1,4 @@
-
+***Live demo :***  https://amirkhamseh-react-memorygame.netlify.app/
 # Memory game 
 Memory Game is a React-based front-end project designed to test players' memory skills. The game starts with 12 covered cards. The objective is to find the 6 pairs of matching cards. On each turn, the user has the option to uncover 2 cards. If the 2 cards match, they will remain uncovered and the player wins that round. If they do not match, both cards will be covered again within 0.5 seconds, and the player must remember the content of the cards for future turns. The game challenges players to win in the fewest number of turns possible.
 
@@ -15,5 +15,6 @@ npm install
 npm run start
 ```
 
-![Memory game](https://github.com/Amirali-Khamseh/React-memory-game/assets/72108341/f5c0398b-22f0-46c1-b12c-a10abe4522dc)
+![Memory game](![image](https://github.com/Amirali-Khamseh/React-memory-game/assets/72108341/7f689beb-fd16-400f-b5f8-d77a4a1201cc)
+)
 
